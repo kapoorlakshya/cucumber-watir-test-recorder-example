@@ -1,4 +1,4 @@
-World(HelperMethods)
-
-@browser_name = ENV['browser'] || :chrome
-@record       = true?(ENV['record']) || false
+require 'watir'
+require 'webdrivers'
+require 'ffmpeg-screenrecorder'
+require 'pry-byebug'
