@@ -9,7 +9,7 @@ Before('@watir') do
   #
   # Setup Recorder
   #
-  opts      = { input:     'desktop',
+  opts      = { input:     'Mozilla Firefox',
                 output:    'test-recording.mp4',
                 framerate: 15,
                 log:       'recorder.log'
@@ -19,8 +19,8 @@ Before('@watir') do
   #
   # Start recording and launch browser
   #
-  @recorder.start
   @browser = Watir::Browser.new @browser_name
+  @recorder.start
 end
 
 #
