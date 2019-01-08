@@ -19,7 +19,17 @@ Before('@watir') do
   #
   # Start recording and launch browser
   #
-  @browser = Watir::Browser.new @browser_name
+  caps = {
+    platform:    'Windows 10',
+    browserName: 'Chrome',
+    version:     '70'
+  }
+
+
+  sauce_user = ENV['sauce_user']
+  sauce_key  = ENV['sauce_key']
+  sauce_url  = "https://#{sauce_user}:#{sauce_key}@ondemand.saucelabs.com:443/wd/hub"
+  @browser   = Watir::Browser.new(@browser_name, url: sauce_url, desired_capabilities: caps)
   @recorder.start
 end
 
