@@ -6,7 +6,7 @@ Feature: Navigation Links on Watir.com
   Background:
     Given I navigate to 'watir.com'
 
-    Scenario: Test News Link
+    Scenario: Test Navigation Links
       When I access the 'News' link
       Then I should be on the 'Watir News' page
       When I access the 'Guides' link
