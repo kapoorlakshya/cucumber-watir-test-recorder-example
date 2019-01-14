@@ -7,7 +7,4 @@ Example project to demo [ffmpeg-screenrecorder](https://github.com/kapoorlakshya
 
 ## Demo
 
-<div class="video-responsive">
-    <iframe src="https://player.vimeo.com/video/311132029" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-    </iframe>
-</div>
+[https://vimeo.com/311132029](https://vimeo.com/311132029)
