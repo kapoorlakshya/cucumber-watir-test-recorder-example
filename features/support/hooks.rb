@@ -1,16 +1,17 @@
-Before('@watir') do
+Before do |scenario|
 
   #
   # Setup Browser & Webdrivers gem
   #
   @browser_name          = :firefox
   Webdrivers.install_dir = 'webdrivers_bin'
+  recording_name         = scenario.name.gsub(/\s/, '-').downcase + '-fail.mp4'
 
   #
   # Setup Recorder
   #
   opts      = { input:     'Mozilla Firefox',
-                output:    'test-recording.mp4',
+                output:    recording_name,
                 framerate: 15,
                 log:       'recorder.log'
   }
@@ -26,7 +27,7 @@ end
 #
 # Close browser and stop recording
 #
-After('@watir') do
+After do |scenario|
   @recorder.stop
   @browser.quit
 end
