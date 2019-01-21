@@ -3,4 +3,4 @@ Example project to demo [ffmpeg-screenrecorder](https://github.com/kapoorlakshya
 
 ## More Information + Demo
 
-[https://kapoorlakshya.github.io/record-videos-of-your-browser-or-gui-based-automated-tests/](https://kapoorlakshya.github.io/record-videos-of-your-browser-or-gui-based-automated-tests/)
+[https://kapoorlakshya.github.io/introducing-ffmpeg-screenrecorder](https://kapoorlakshya.github.io/introducing-ffmpeg-screenrecorder)
