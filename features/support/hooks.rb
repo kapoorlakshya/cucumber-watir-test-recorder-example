@@ -30,4 +30,6 @@ end
 After do |scenario|
   @recorder.stop
   @browser.quit
+
+  @recorder.discard if scenario.passed?
 end
