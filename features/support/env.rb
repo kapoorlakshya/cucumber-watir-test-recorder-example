@@ -1,4 +1,4 @@
 require 'watir'
 require 'webdrivers'
-require 'ffmpeg-screenrecorder'
+require 'screen-recorder'
 require 'pry-byebug'

@@ -3,7 +3,7 @@ Given(/^I navigate to '(.+)'$/) do |url|
 end
 
 When(/^I access the '(.+)' link$/) do |link_title|
-  @browser.link(text: link_title).wait_until(&:present?).click
+  @browser.link(text: link_title).wait_until(&:present?).wait_while(&:obscured?).click
 end
 
 Then(/^I should be on the '(.+)' page$/) do |page_title|
