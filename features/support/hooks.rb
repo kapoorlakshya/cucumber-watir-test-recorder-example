@@ -5,7 +5,7 @@ Before do |scenario|
   #
   @browser_name          = :firefox
   Webdrivers.install_dir = 'webdrivers_bin'
-  recording_name         = scenario.name.gsub(/\s/, '-').downcase + '-fail.mp4'
+  recording_name         = scenario.name.gsub(/\s/, '-').downcase + '.mp4'
   @browser               = Watir::Browser.new @browser_name
 
   #

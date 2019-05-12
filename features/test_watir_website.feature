@@ -1,4 +1,4 @@
-@watir
+@record_test
 Feature: Navigation Links on Watir.com
   As an automated tester, I want to verify the navigation links in the header of Watir.com work and
   open the expected pages.
