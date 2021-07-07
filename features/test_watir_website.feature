@@ -14,4 +14,4 @@ Feature: Navigation Links on Watir.com
       When I access the 'Help' link
       Then I should be on the 'Help' page
       When I access the 'About' link
-      Then I should be on the 'About Watir' page
+      Then I should be on the 'About Watir1' page
