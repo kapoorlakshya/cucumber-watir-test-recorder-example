@@ -3,16 +3,15 @@ Before do |scenario|
   #
   # Browser browser
   #
-  @browser_name          = :firefox
   Webdrivers.install_dir = 'webdrivers_bin'
-  recording_name         = scenario.name.gsub(/\s/, '-').downcase + '.mp4'
-  @browser               = Watir::Browser.new @browser_name
+  recording_name         = scenario.name.gsub(/\s/, '-').downcase
+  @browser               = Watir::Browser.new
 
   #
   # Start recording
   #
-  window_title = ScreenRecorder::Titles.fetch(@browser_name).first
-  @recorder    = ScreenRecorder::Window.new(title: window_title, output: recording_name)
+  #window_title = ScreenRecorder::Titles.fetch(@browser_name).first
+  @recorder = ScreenRecorder::Desktop.new(output: recording_name +".mkv")
   @recorder.start
 end
 
@@ -22,5 +21,5 @@ end
 After do |scenario|
   @recorder.stop
   @browser.quit
-  # @recorder.discard if scenario.passed?
+  @recorder.discard if scenario.passed?
 end
