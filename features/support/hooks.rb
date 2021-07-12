@@ -1,9 +1,9 @@
 Before do |scenario|
 
   #
-  # Browser browser
+  # Start browser
   #
-  @browser_name          = :chrome
+  @browser_name          = ENV.fetch('BROWSER', :chrome)
   Webdrivers.install_dir = 'webdrivers_bin'
   recording_name         = scenario.name.gsub(/\s/, '-').downcase + '.mp4'
   @browser               = Watir::Browser.new @browser_name
