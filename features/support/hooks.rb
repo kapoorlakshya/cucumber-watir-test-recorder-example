@@ -11,8 +11,7 @@ Before do |scenario|
   #
   # Start recording
   #
-  window_title = ScreenRecorder::Titles.fetch(@browser_name).first
-  @recorder    = ScreenRecorder::Window.new(title: window_title, output: recording_name)
+  @recorder    = ScreenRecorder::Desktop.new(output: recording_name)
   @recorder.start
 end
 
